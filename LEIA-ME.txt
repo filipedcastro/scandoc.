@@ -1,19 +1,26 @@
-SCANDOC — PROTÓTIPO PWA
-1. Hospede esta pasta em um endereço HTTPS (por exemplo, hospedagem estática).
-2. No iPhone, abra o endereço no Safari.
-3. Toque em Compartilhar > Adicionar à Tela de Início.
-4. Abra o ícone ScanDoc e permita o uso da câmera.
+SCANDOC 2.0 — ATUALIZAÇÃO
 
-Recursos do protótipo:
-- captura pela câmera ou seleção de foto;
-- tentativa de detecção de quadrilátero e correção de perspectiva via OpenCV.js;
-- realce monocromático;
-- múltiplas páginas e exportação PDF;
-- compartilhamento pelo menu nativo do iOS.
+O que mudou:
+- detecção contínua do contorno da folha na câmera, com contorno dourado;
+- detecção com mais de uma técnica de bordas/contraste;
+- ajuste manual dos quatro cantos arrastando os pontos;
+- correção de perspectiva;
+- filtros Documento, Colorido, Cinza e Preto e Branco;
+- giro da imagem;
+- captura automática opcional quando o documento fica estável;
+- PDF A4, Carta ou proporcional, com opções de qualidade;
+- várias páginas, exclusão e reordenação;
+- compartilhamento pelo menu nativo do iPhone.
 
-Limitações:
-- OpenCV.js e jsPDF são carregados de CDNs; a primeira carga exige internet.
-- A detecção automática depende da qualidade da imagem e pode não localizar todas as folhas.
-- Se não detectar o documento, a imagem inteira é mantida.
-- O compartilhamento abre a folha de compartilhamento do iOS; o usuário escolhe WhatsApp e a conversa.
-- Este é um protótipo inicial, ainda precisa ser testado em diferentes modelos e versões do iOS.
+ATUALIZAÇÃO NO GITHUB:
+1. Abra o repositório do ScanDoc.
+2. Use Add file > Upload files.
+3. Envie os arquivos desta pasta, substituindo os existentes: index.html, manifest.webmanifest e sw.js.
+4. Confirme em Commit changes.
+5. No iPhone, feche o ScanDoc e abra novamente pelo Safari/ícone. Se aparecer a versão antiga, abra o endereço no Safari e atualize a página; pode ser necessário remover e adicionar novamente à Tela de Início.
+
+Observações:
+- OpenCV.js e jsPDF são carregados de CDNs; a primeira abertura precisa de internet.
+- A detecção automática é uma estimativa por visão computacional e pode falhar em fundos sem contraste, pouca luz, folhas dobradas ou documentos parcialmente encobertos. O recorte manual permite corrigir.
+- Compartilhamento direto para uma conversa específica do WhatsApp não é permitido de forma confiável por um PWA; o iOS abre a folha de compartilhamento para escolher o destino.
+- Testar em aparelho real é essencial. Esta é uma versão de protótipo, não um app nativo validado pela Apple.
