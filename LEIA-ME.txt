@@ -1,0 +1,19 @@
+SCANDOC — PROTÓTIPO PWA
+1. Hospede esta pasta em um endereço HTTPS (por exemplo, hospedagem estática).
+2. No iPhone, abra o endereço no Safari.
+3. Toque em Compartilhar > Adicionar à Tela de Início.
+4. Abra o ícone ScanDoc e permita o uso da câmera.
+
+Recursos do protótipo:
+- captura pela câmera ou seleção de foto;
+- tentativa de detecção de quadrilátero e correção de perspectiva via OpenCV.js;
+- realce monocromático;
+- múltiplas páginas e exportação PDF;
+- compartilhamento pelo menu nativo do iOS.
+
+Limitações:
+- OpenCV.js e jsPDF são carregados de CDNs; a primeira carga exige internet.
+- A detecção automática depende da qualidade da imagem e pode não localizar todas as folhas.
+- Se não detectar o documento, a imagem inteira é mantida.
+- O compartilhamento abre a folha de compartilhamento do iOS; o usuário escolhe WhatsApp e a conversa.
+- Este é um protótipo inicial, ainda precisa ser testado em diferentes modelos e versões do iOS.
